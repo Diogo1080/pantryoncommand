@@ -5,7 +5,6 @@ package com.pantryoncommand.enumerators;
  */
 
 public enum UserRole {
-
     USER,
     ADMIN
 }
