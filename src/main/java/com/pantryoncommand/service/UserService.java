@@ -6,10 +6,13 @@ import com.pantryoncommand.command.user.UpdateUserDto;
 import com.pantryoncommand.command.user.UserDetailsDto;
 import com.pantryoncommand.enumerators.UserRole;
 import com.pantryoncommand.exeption.DatabaseCommunicationException;
-import com.pantryoncommand.exeption.UserAlreadyExistsException;
-import com.pantryoncommand.exeption.UserNotFoundException;
+import com.pantryoncommand.exeption.user.UserAlreadyExistsException;
+import com.pantryoncommand.exeption.user.UserNotFoundException;
 import org.springframework.data.domain.Pageable;
 
+/**
+ * Common interface for User service, provides methods to manage Users
+ */
 public interface UserService {
     /**
      * Create new user

@@ -1,4 +1,4 @@
-package com.pantryoncommand.exeption;
+package com.pantryoncommand.exeption.recipe;
 
 
 import org.springframework.http.HttpStatus;

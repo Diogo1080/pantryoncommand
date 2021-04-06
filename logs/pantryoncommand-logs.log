@@ -59,3 +59,146 @@
 [INFO ] 2021-04-05 14:17:59.422 [http-nio-8080-exec-2] UserController - Responding if delete was successful or not
 [INFO ] 2021-04-05 14:18:01.825 [http-nio-8080-exec-3] UserController - Request to get user of id - 1
 [ERROR] 2021-04-05 14:18:01.831 [http-nio-8080-exec-3] UserServiceImp - Can't find any user with the given id
+[INFO ] 2021-04-05 16:54:37.364 [restartedMain] PantryoncommandApplication - Starting PantryoncommandApplication using Java 15 on Diogos-MacBook-Pro.local with PID 19608 (/Users/diogo1080/workplace/project/pantryoncommand/target/classes started by diogo1080 in /Users/diogo1080/workplace/project/pantryoncommand)
+[INFO ] 2021-04-05 16:54:37.371 [restartedMain] PantryoncommandApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2021-04-05 17:00:36.846 [restartedMain] PantryoncommandApplication - Starting PantryoncommandApplication using Java 15 on Diogos-MacBook-Pro.local with PID 19645 (/Users/diogo1080/workplace/project/pantryoncommand/target/classes started by diogo1080 in /Users/diogo1080/workplace/project/pantryoncommand)
+[INFO ] 2021-04-05 17:00:36.852 [restartedMain] PantryoncommandApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2021-04-05 17:00:40.404 [restartedMain] PantryoncommandApplication - Started PantryoncommandApplication in 3.866 seconds (JVM running for 9.698)
+[INFO ] 2021-04-06 15:07:16.956 [restartedMain] PantryoncommandApplication - Starting PantryoncommandApplication using Java 15 on Diogos-MacBook-Pro.local with PID 29313 (/Users/diogo1080/workplace/project/pantryoncommand/target/classes started by diogo1080 in /Users/diogo1080/workplace/project/pantryoncommand)
+[INFO ] 2021-04-06 15:07:16.961 [restartedMain] PantryoncommandApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2021-04-06 15:09:13.177 [restartedMain] PantryoncommandApplication - Starting PantryoncommandApplication using Java 15 on Diogos-MacBook-Pro.local with PID 29326 (/Users/diogo1080/workplace/project/pantryoncommand/target/classes started by diogo1080 in /Users/diogo1080/workplace/project/pantryoncommand)
+[INFO ] 2021-04-06 15:09:13.182 [restartedMain] PantryoncommandApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2021-04-06 15:09:57.745 [restartedMain] PantryoncommandApplication - Starting PantryoncommandApplication using Java 15 on Diogos-MacBook-Pro.local with PID 29330 (/Users/diogo1080/workplace/project/pantryoncommand/target/classes started by diogo1080 in /Users/diogo1080/workplace/project/pantryoncommand)
+[INFO ] 2021-04-06 15:09:57.749 [restartedMain] PantryoncommandApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2021-04-06 15:10:01.245 [restartedMain] PantryoncommandApplication - Started PantryoncommandApplication in 3.78 seconds (JVM running for 9.644)
+[INFO ] 2021-04-06 15:10:37.664 [http-nio-8080-exec-1] CategoryController - Request to get category of id - 1
+[ERROR] 2021-04-06 15:10:37.704 [http-nio-8080-exec-1] CategoryServiceImp - Can't find any category with the given id
+[INFO ] 2021-04-06 15:12:37.184 [http-nio-8080-exec-6] UserController - Request to create user - CreateUserDto{firstName='Diogo', email='213@213.com', password='***''} and role USER.
+[INFO ] 2021-04-06 15:12:37.216 [http-nio-8080-exec-6] UserController - Retrieving created user UserDetailsDto(id=1, userName=Diogo, email=213@213.com)
+[INFO ] 2021-04-06 15:12:59.791 [restartedMain] PantryoncommandApplication - Starting PantryoncommandApplication using Java 15 on Diogos-MacBook-Pro.local with PID 29344 (/Users/diogo1080/workplace/project/pantryoncommand/target/classes started by diogo1080 in /Users/diogo1080/workplace/project/pantryoncommand)
+[INFO ] 2021-04-06 15:12:59.795 [restartedMain] PantryoncommandApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2021-04-06 15:13:03.509 [restartedMain] PantryoncommandApplication - Started PantryoncommandApplication in 4.002 seconds (JVM running for 9.84)
+[INFO ] 2021-04-06 15:14:08.024 [http-nio-8080-exec-2] CategoryController - Request to get category of id - 1
+[ERROR] 2021-04-06 15:14:08.066 [http-nio-8080-exec-2] CategoryServiceImp - Can't find any category with the given id
+[INFO ] 2021-04-06 15:14:50.319 [http-nio-8080-exec-4] CategoryController - Request to delete category of id - 1
+[ERROR] 2021-04-06 15:14:50.323 [http-nio-8080-exec-4] CategoryServiceImp - Can't find any category with the given id
+[INFO ] 2021-04-06 15:16:00.761 [http-nio-8080-exec-10] CategoryController - Request to get category list with page and size - 0 2
+[INFO ] 2021-04-06 15:16:00.873 [http-nio-8080-exec-10] CategoryController - Retrieving List of category with info - Paginated(results=[], elementsCurrentPage=0, currentPage=0, numberOfPages=0, totalElements=0)
+[INFO ] 2021-04-06 15:16:03.718 [http-nio-8080-exec-1] CategoryController - Request to get category of id - 1
+[ERROR] 2021-04-06 15:16:03.727 [http-nio-8080-exec-1] CategoryServiceImp - Can't find any category with the given id
+[INFO ] 2021-04-06 15:17:47.451 [restartedMain] PantryoncommandApplication - Starting PantryoncommandApplication using Java 15 on Diogos-MacBook-Pro.local with PID 29428 (/Users/diogo1080/workplace/project/pantryoncommand/target/classes started by diogo1080 in /Users/diogo1080/workplace/project/pantryoncommand)
+[INFO ] 2021-04-06 15:17:47.455 [restartedMain] PantryoncommandApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2021-04-06 15:17:51.490 [restartedMain] PantryoncommandApplication - Started PantryoncommandApplication in 4.33 seconds (JVM running for 10.148)
+[INFO ] 2021-04-06 15:21:45.566 [restartedMain] PantryoncommandApplication - Starting PantryoncommandApplication using Java 15 on Diogos-MacBook-Pro.local with PID 29593 (/Users/diogo1080/workplace/project/pantryoncommand/target/classes started by diogo1080 in /Users/diogo1080/workplace/project/pantryoncommand)
+[INFO ] 2021-04-06 15:21:45.570 [restartedMain] PantryoncommandApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2021-04-06 15:21:48.924 [restartedMain] PantryoncommandApplication - Started PantryoncommandApplication in 3.636 seconds (JVM running for 9.478)
+[INFO ] 2021-04-06 15:22:56.978 [restartedMain] PantryoncommandApplication - Starting PantryoncommandApplication using Java 15 on Diogos-MacBook-Pro.local with PID 29650 (/Users/diogo1080/workplace/project/pantryoncommand/target/classes started by diogo1080 in /Users/diogo1080/workplace/project/pantryoncommand)
+[INFO ] 2021-04-06 15:22:56.982 [restartedMain] PantryoncommandApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2021-04-06 15:23:00.013 [restartedMain] PantryoncommandApplication - Started PantryoncommandApplication in 3.304 seconds (JVM running for 9.048)
+[INFO ] 2021-04-06 15:24:24.137 [http-nio-8080-exec-6] CategoryController - Request to get category list with page and size - 0 2
+[INFO ] 2021-04-06 15:24:24.279 [http-nio-8080-exec-6] CategoryController - Retrieving List of category with info - Paginated(results=[], elementsCurrentPage=0, currentPage=0, numberOfPages=0, totalElements=0)
+[INFO ] 2021-04-06 15:24:32.706 [http-nio-8080-exec-7] CategoryController - Request to get category of id - 1
+[ERROR] 2021-04-06 15:24:32.719 [http-nio-8080-exec-7] CategoryServiceImp - Can't find any category with the given id
+[INFO ] 2021-04-06 15:24:41.484 [http-nio-8080-exec-2] CategoryController - Request to delete category of id - 1
+[ERROR] 2021-04-06 15:24:41.488 [http-nio-8080-exec-2] CategoryServiceImp - Can't find any category with the given id
+[INFO ] 2021-04-06 15:25:30.926 [http-nio-8080-exec-3] UserController - Request to create user - CreateUserDto{firstName='Diogo', email='213@213.com', password='***''} and role USER.
+[INFO ] 2021-04-06 15:25:30.958 [http-nio-8080-exec-3] UserController - Retrieving created user UserDetailsDto(id=1, userName=Diogo, email=213@213.com)
+[INFO ] 2021-04-06 15:31:24.692 [restartedMain] PantryoncommandApplication - Starting PantryoncommandApplication using Java 15 on Diogos-MacBook-Pro.local with PID 30062 (/Users/diogo1080/workplace/project/pantryoncommand/target/classes started by diogo1080 in /Users/diogo1080/workplace/project/pantryoncommand)
+[INFO ] 2021-04-06 15:31:24.696 [restartedMain] PantryoncommandApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2021-04-06 15:31:27.956 [restartedMain] PantryoncommandApplication - Started PantryoncommandApplication in 3.54 seconds (JVM running for 9.389)
+[INFO ] 2021-04-06 15:31:32.280 [http-nio-8080-exec-2] UserController - Request to create user - CreateUserDto{firstName='Diogo', email='213@213.com', password='***''} and role USER.
+[INFO ] 2021-04-06 15:31:32.329 [http-nio-8080-exec-2] UserController - Retrieving created user UserDetailsDto(id=1, userName=Diogo, email=213@213.com)
+[INFO ] 2021-04-06 15:31:58.084 [restartedMain] PantryoncommandApplication - Starting PantryoncommandApplication using Java 15 on Diogos-MacBook-Pro.local with PID 30090 (/Users/diogo1080/workplace/project/pantryoncommand/target/classes started by diogo1080 in /Users/diogo1080/workplace/project/pantryoncommand)
+[INFO ] 2021-04-06 15:31:58.088 [restartedMain] PantryoncommandApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2021-04-06 15:32:01.652 [restartedMain] PantryoncommandApplication - Started PantryoncommandApplication in 3.836 seconds (JVM running for 9.745)
+[INFO ] 2021-04-06 15:32:03.600 [http-nio-8080-exec-1] UserController - Request to create user - CreateUserDto{firstName='Diogo', email='213@213.com', password='***''} and role USER.
+[INFO ] 2021-04-06 15:32:03.647 [http-nio-8080-exec-1] UserController - Retrieving created user UserDetailsDto(id=1, userName=Diogo, email=213@213.com)
+[INFO ] 2021-04-06 15:33:34.382 [http-nio-8080-exec-9] CategoryController - Request to get category of id - 1
+[ERROR] 2021-04-06 15:33:34.402 [http-nio-8080-exec-9] CategoryServiceImp - Can't find any category with the given id
+[INFO ] 2021-04-06 15:33:37.284 [http-nio-8080-exec-10] CategoryController - Request to get category list with page and size - 0 2
+[INFO ] 2021-04-06 15:33:37.407 [http-nio-8080-exec-10] CategoryController - Retrieving List of category with info - Paginated(results=[], elementsCurrentPage=0, currentPage=0, numberOfPages=0, totalElements=0)
+[INFO ] 2021-04-06 15:33:41.101 [http-nio-8080-exec-1] CategoryController - Request to delete category of id - 1
+[ERROR] 2021-04-06 15:33:41.107 [http-nio-8080-exec-1] CategoryServiceImp - Can't find any category with the given id
+[INFO ] 2021-04-06 15:35:50.260 [restartedMain] PantryoncommandApplication - Starting PantryoncommandApplication using Java 15 on Diogos-MacBook-Pro.local with PID 30300 (/Users/diogo1080/workplace/project/pantryoncommand/target/classes started by diogo1080 in /Users/diogo1080/workplace/project/pantryoncommand)
+[INFO ] 2021-04-06 15:35:50.268 [restartedMain] PantryoncommandApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2021-04-06 15:35:53.775 [restartedMain] PantryoncommandApplication - Started PantryoncommandApplication in 3.817 seconds (JVM running for 9.771)
+[INFO ] 2021-04-06 15:36:43.140 [restartedMain] PantryoncommandApplication - Starting PantryoncommandApplication using Java 15 on Diogos-MacBook-Pro.local with PID 30355 (/Users/diogo1080/workplace/project/pantryoncommand/target/classes started by diogo1080 in /Users/diogo1080/workplace/project/pantryoncommand)
+[INFO ] 2021-04-06 15:36:43.144 [restartedMain] PantryoncommandApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2021-04-06 15:36:46.160 [restartedMain] PantryoncommandApplication - Started PantryoncommandApplication in 3.289 seconds (JVM running for 9.185)
+[INFO ] 2021-04-06 15:40:37.110 [restartedMain] PantryoncommandApplication - Starting PantryoncommandApplication using Java 15 on Diogos-MacBook-Pro.local with PID 30509 (/Users/diogo1080/workplace/project/pantryoncommand/target/classes started by diogo1080 in /Users/diogo1080/workplace/project/pantryoncommand)
+[INFO ] 2021-04-06 15:40:37.114 [restartedMain] PantryoncommandApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2021-04-06 15:40:40.850 [restartedMain] PantryoncommandApplication - Started PantryoncommandApplication in 4.016 seconds (JVM running for 9.935)
+[INFO ] 2021-04-06 15:52:47.839 [restartedMain] PantryoncommandApplication - Starting PantryoncommandApplication using Java 15 on Diogos-MacBook-Pro.local with PID 31084 (/Users/diogo1080/workplace/project/pantryoncommand/target/classes started by diogo1080 in /Users/diogo1080/workplace/project/pantryoncommand)
+[INFO ] 2021-04-06 15:52:47.842 [restartedMain] PantryoncommandApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2021-04-06 15:52:52.145 [restartedMain] PantryoncommandApplication - Started PantryoncommandApplication in 4.606 seconds (JVM running for 10.493)
+[INFO ] 2021-04-06 15:56:50.538 [restartedMain] PantryoncommandApplication - Starting PantryoncommandApplication using Java 15 on Diogos-MacBook-Pro.local with PID 31311 (/Users/diogo1080/workplace/project/pantryoncommand/target/classes started by diogo1080 in /Users/diogo1080/workplace/project/pantryoncommand)
+[INFO ] 2021-04-06 15:56:50.541 [restartedMain] PantryoncommandApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2021-04-06 15:56:53.761 [restartedMain] PantryoncommandApplication - Started PantryoncommandApplication in 3.492 seconds (JVM running for 9.252)
+[INFO ] 2021-04-06 16:14:07.393 [restartedMain] PantryoncommandApplication - Starting PantryoncommandApplication using Java 15 on Diogos-MacBook-Pro.local with PID 32147 (/Users/diogo1080/workplace/project/pantryoncommand/target/classes started by diogo1080 in /Users/diogo1080/workplace/project/pantryoncommand)
+[INFO ] 2021-04-06 16:14:07.396 [restartedMain] PantryoncommandApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2021-04-06 16:14:11.176 [restartedMain] PantryoncommandApplication - Started PantryoncommandApplication in 4.054 seconds (JVM running for 9.803)
+[INFO ] 2021-04-06 16:14:14.856 [http-nio-8080-exec-2] CategoryController - Request to create Category - CreateOrUpdateCategoryDto(categoryName=laticinios)
+[INFO ] 2021-04-06 16:14:14.912 [http-nio-8080-exec-2] CategoryController - Retrieving created Category - CategoryDetailsDto(id=1, name=laticinios)
+[INFO ] 2021-04-06 16:14:40.143 [restartedMain] PantryoncommandApplication - Starting PantryoncommandApplication using Java 15 on Diogos-MacBook-Pro.local with PID 32173 (/Users/diogo1080/workplace/project/pantryoncommand/target/classes started by diogo1080 in /Users/diogo1080/workplace/project/pantryoncommand)
+[INFO ] 2021-04-06 16:14:40.146 [restartedMain] PantryoncommandApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2021-04-06 16:14:43.791 [restartedMain] PantryoncommandApplication - Started PantryoncommandApplication in 3.917 seconds (JVM running for 9.652)
+[INFO ] 2021-04-06 16:15:09.427 [http-nio-8080-exec-2] CategoryController - Request to create Category - CreateOrUpdateCategoryDto(categoryName=laticinios)
+[INFO ] 2021-04-06 16:15:09.478 [http-nio-8080-exec-2] CategoryController - Retrieving created Category - CategoryDetailsDto(id=1, name=laticinios)
+[INFO ] 2021-04-06 16:17:58.321 [restartedMain] PantryoncommandApplication - Starting PantryoncommandApplication using Java 15 on Diogos-MacBook-Pro.local with PID 32326 (/Users/diogo1080/workplace/project/pantryoncommand/target/classes started by diogo1080 in /Users/diogo1080/workplace/project/pantryoncommand)
+[INFO ] 2021-04-06 16:17:58.325 [restartedMain] PantryoncommandApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2021-04-06 16:18:02.154 [restartedMain] PantryoncommandApplication - Started PantryoncommandApplication in 4.101 seconds (JVM running for 10.002)
+[INFO ] 2021-04-06 16:18:46.294 [restartedMain] PantryoncommandApplication - Starting PantryoncommandApplication using Java 15 on Diogos-MacBook-Pro.local with PID 32362 (/Users/diogo1080/workplace/project/pantryoncommand/target/classes started by diogo1080 in /Users/diogo1080/workplace/project/pantryoncommand)
+[INFO ] 2021-04-06 16:18:46.298 [restartedMain] PantryoncommandApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2021-04-06 16:18:49.847 [restartedMain] PantryoncommandApplication - Started PantryoncommandApplication in 3.823 seconds (JVM running for 9.535)
+[INFO ] 2021-04-06 16:18:57.752 [http-nio-8080-exec-2] CategoryController - Request to create Category - CreateOrUpdateCategoryDto(categoryName=laticinios)
+[INFO ] 2021-04-06 16:18:57.804 [http-nio-8080-exec-2] CategoryController - Retrieving created Category - CategoryDetailsDto(id=1, name=laticinios)
+[INFO ] 2021-04-06 16:19:00.051 [http-nio-8080-exec-3] CategoryController - Request to create Category - CreateOrUpdateCategoryDto(categoryName=laticinios)
+[ERROR] 2021-04-06 16:19:00.067 [http-nio-8080-exec-3] CategoryServiceImp - Category with the given name already exists
+[INFO ] 2021-04-06 16:20:17.831 [http-nio-8080-exec-7] CategoryController - Request to update category of id - 1 - with info - CreateOrUpdateCategoryDto(categoryName=laticinias)
+[INFO ] 2021-04-06 16:20:17.864 [http-nio-8080-exec-7] CategoryController - Retrieving updated of category with info - CategoryDetailsDto(id=1, name=laticinias)
+[INFO ] 2021-04-06 16:20:22.191 [http-nio-8080-exec-8] CategoryController - Request to update category of id - 1 - with info - CreateOrUpdateCategoryDto(categoryName=laticinios)
+[INFO ] 2021-04-06 16:20:22.206 [http-nio-8080-exec-8] CategoryController - Retrieving updated of category with info - CategoryDetailsDto(id=1, name=laticinios)
+[INFO ] 2021-04-06 16:20:37.059 [http-nio-8080-exec-9] CategoryController - Request to get category of id - 1
+[INFO ] 2021-04-06 16:20:37.066 [http-nio-8080-exec-9] CategoryController - Retrieving category with info - CategoryDetailsDto(id=1, name=laticinios)
+[INFO ] 2021-04-06 16:20:38.875 [http-nio-8080-exec-10] CategoryController - Request to get category list with page and size - 0 2
+[INFO ] 2021-04-06 16:20:38.990 [http-nio-8080-exec-10] CategoryController - Retrieving List of category with info - Paginated(results=[CategoryDetailsDto(id=1, name=laticinios)], elementsCurrentPage=1, currentPage=0, numberOfPages=1, totalElements=1)
+[INFO ] 2021-04-06 16:20:42.382 [http-nio-8080-exec-1] CategoryController - Request to delete category of id - 1
+[INFO ] 2021-04-06 16:20:42.408 [http-nio-8080-exec-1] CategoryController - Responding on successful delete
+[INFO ] 2021-04-06 16:27:10.650 [restartedMain] PantryoncommandApplication - Starting PantryoncommandApplication using Java 15 on Diogos-MacBook-Pro.local with PID 32807 (/Users/diogo1080/workplace/project/pantryoncommand/target/classes started by diogo1080 in /Users/diogo1080/workplace/project/pantryoncommand)
+[INFO ] 2021-04-06 16:27:10.654 [restartedMain] PantryoncommandApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2021-04-06 16:28:05.894 [restartedMain] PantryoncommandApplication - Starting PantryoncommandApplication using Java 15 on Diogos-MacBook-Pro.local with PID 32847 (/Users/diogo1080/workplace/project/pantryoncommand/target/classes started by diogo1080 in /Users/diogo1080/workplace/project/pantryoncommand)
+[INFO ] 2021-04-06 16:28:05.896 [restartedMain] PantryoncommandApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2021-04-06 16:28:09.461 [restartedMain] PantryoncommandApplication - Started PantryoncommandApplication in 3.85 seconds (JVM running for 9.667)
+[INFO ] 2021-04-06 16:28:36.111 [http-nio-8080-exec-3] IngredientController - Request to get ingredient list with page and size - 0 2
+[INFO ] 2021-04-06 16:28:36.233 [http-nio-8080-exec-3] IngredientController - Retrieving List of ingredient with info - Paginated(results=[], elementsCurrentPage=0, currentPage=0, numberOfPages=0, totalElements=0)
+[INFO ] 2021-04-06 16:30:31.501 [http-nio-8080-exec-6] CategoryController - Request to create Category - CreateOrUpdateCategoryDto(categoryName=laticinios)
+[INFO ] 2021-04-06 16:30:31.539 [http-nio-8080-exec-6] CategoryController - Retrieving created Category - CategoryDetailsDto(id=1, name=laticinios)
+[INFO ] 2021-04-06 16:31:54.100 [restartedMain] PantryoncommandApplication - Starting PantryoncommandApplication using Java 15 on Diogos-MacBook-Pro.local with PID 33007 (/Users/diogo1080/workplace/project/pantryoncommand/target/classes started by diogo1080 in /Users/diogo1080/workplace/project/pantryoncommand)
+[INFO ] 2021-04-06 16:31:54.103 [restartedMain] PantryoncommandApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2021-04-06 16:31:58.258 [restartedMain] PantryoncommandApplication - Started PantryoncommandApplication in 4.467 seconds (JVM running for 10.285)
+[INFO ] 2021-04-06 16:32:00.494 [http-nio-8080-exec-1] CategoryController - Request to create Category - CreateOrUpdateCategoryDto(categoryName=laticinios)
+[INFO ] 2021-04-06 16:32:00.542 [http-nio-8080-exec-1] CategoryController - Retrieving created Category - CategoryDetailsDto(id=1, name=laticinios)
+[INFO ] 2021-04-06 16:32:04.612 [http-nio-8080-exec-3] IngredientController - Request to create Ingredient - CreateOrUpdateIngredientDto(categoryId=1, name=randomName)
+[INFO ] 2021-04-06 16:32:04.649 [http-nio-8080-exec-3] IngredientController - Retrieving created Ingredient - IngredientDetailsDto(id=1, categoryId=0, name=randomName)
+[INFO ] 2021-04-06 16:37:26.161 [restartedMain] PantryoncommandApplication - Starting PantryoncommandApplication using Java 15 on Diogos-MacBook-Pro.local with PID 33278 (/Users/diogo1080/workplace/project/pantryoncommand/target/classes started by diogo1080 in /Users/diogo1080/workplace/project/pantryoncommand)
+[INFO ] 2021-04-06 16:37:26.164 [restartedMain] PantryoncommandApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2021-04-06 16:37:29.837 [restartedMain] PantryoncommandApplication - Started PantryoncommandApplication in 3.935 seconds (JVM running for 9.703)
+[INFO ] 2021-04-06 16:37:32.556 [http-nio-8080-exec-2] CategoryController - Request to create Category - CreateOrUpdateCategoryDto(categoryName=laticinios)
+[INFO ] 2021-04-06 16:37:32.612 [http-nio-8080-exec-2] CategoryController - Retrieving created Category - CategoryDetailsDto(id=1, name=laticinios)
+[INFO ] 2021-04-06 16:37:34.510 [http-nio-8080-exec-3] IngredientController - Request to create Ingredient - CreateOrUpdateIngredientDto(categoryId=1, name=randomName)
+[INFO ] 2021-04-06 16:37:34.545 [http-nio-8080-exec-3] IngredientController - Retrieving created Ingredient - IngredientDetailsDto(id=1, categoryId=0, name=randomName)
+[INFO ] 2021-04-06 16:39:49.743 [restartedMain] PantryoncommandApplication - Starting PantryoncommandApplication using Java 15 on Diogos-MacBook-Pro.local with PID 33374 (/Users/diogo1080/workplace/project/pantryoncommand/target/classes started by diogo1080 in /Users/diogo1080/workplace/project/pantryoncommand)
+[INFO ] 2021-04-06 16:39:49.746 [restartedMain] PantryoncommandApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2021-04-06 16:39:53.417 [restartedMain] PantryoncommandApplication - Started PantryoncommandApplication in 3.947 seconds (JVM running for 9.68)
+[INFO ] 2021-04-06 16:39:55.846 [http-nio-8080-exec-1] IngredientController - Request to create Ingredient - CreateOrUpdateIngredientDto(categoryId=1, name=randomName)
+[ERROR] 2021-04-06 16:39:55.887 [http-nio-8080-exec-1] IngredientServiceImp - Can't find any category with the given id
+[INFO ] 2021-04-06 16:39:58.894 [http-nio-8080-exec-4] CategoryController - Request to create Category - CreateOrUpdateCategoryDto(categoryName=laticinios)
+[INFO ] 2021-04-06 16:39:58.933 [http-nio-8080-exec-4] CategoryController - Retrieving created Category - CategoryDetailsDto(id=1, name=laticinios)
+[INFO ] 2021-04-06 16:40:00.354 [http-nio-8080-exec-5] IngredientController - Request to create Ingredient - CreateOrUpdateIngredientDto(categoryId=1, name=randomName)
+[INFO ] 2021-04-06 16:40:00.379 [http-nio-8080-exec-5] IngredientController - Retrieving created Ingredient - IngredientDetailsDto(id=1, categoryId=1, name=randomName)
+[INFO ] 2021-04-06 16:40:27.582 [http-nio-8080-exec-8] IngredientController - Request to update ingredient of id - 1 - with info - CreateOrUpdateIngredientDto(categoryId=1, name=Cheese)
+[INFO ] 2021-04-06 16:40:27.628 [http-nio-8080-exec-8] IngredientController - Retrieving updated of ingredient with info - IngredientDetailsDto(id=1, categoryId=1, name=Cheese)
+[INFO ] 2021-04-06 16:40:38.706 [http-nio-8080-exec-10] IngredientController - Request to get ingredient of id - 1
+[INFO ] 2021-04-06 16:40:38.714 [http-nio-8080-exec-10] IngredientController - Retrieving ingredient with info - IngredientDetailsDto(id=1, categoryId=1, name=Cheese)
+[INFO ] 2021-04-06 16:40:42.791 [http-nio-8080-exec-2] IngredientController - Request to get ingredient list with page and size - 0 2
+[INFO ] 2021-04-06 16:40:42.893 [http-nio-8080-exec-2] IngredientController - Retrieving List of ingredient with info - Paginated(results=[IngredientDetailsDto(id=1, categoryId=1, name=Cheese)], elementsCurrentPage=1, currentPage=0, numberOfPages=1, totalElements=1)

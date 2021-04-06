@@ -103,7 +103,7 @@ public class UserController {
         LOGGER.info("Request to delete user of id - {}", userId);
         userService.deleteUser(userId);
 
-        LOGGER.info("Responding if delete was successful or not");
+        LOGGER.info("Responding on successful delete");
         return new ResponseEntity(OK);
     }
 }

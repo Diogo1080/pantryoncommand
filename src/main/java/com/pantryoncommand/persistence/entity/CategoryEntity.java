@@ -19,9 +19,9 @@ import javax.persistence.*;
 public class CategoryEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long categoryId;
+    private long id;
 
-    @Column(nullable = false)
+    @Column(unique=true, nullable = false)
     private String name;
 
 }

@@ -1,6 +1,10 @@
 package com.pantryoncommand.exeption;
 
 import com.pantryoncommand.error.Error;
+import com.pantryoncommand.exeption.recipe.RecipeAlreadyExistsException;
+import com.pantryoncommand.exeption.recipe.RecipeNotFoundException;
+import com.pantryoncommand.exeption.user.UserAlreadyExistsException;
+import com.pantryoncommand.exeption.user.UserNotFoundException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
