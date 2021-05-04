@@ -17,7 +17,10 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -30,10 +33,12 @@ import java.util.List;
 public class UserServiceImp implements UserService {
 
     private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
     private static final Logger LOGGER = LogManager.getLogger(UserServiceImp.class);
 
-    public UserServiceImp(UserRepository userRepository) {
+    public UserServiceImp(UserRepository userRepository, PasswordEncoder passwordEncoder) {
         this.userRepository = userRepository;
+        this.passwordEncoder = passwordEncoder;
     }
 
     /**
@@ -44,6 +49,11 @@ public class UserServiceImp implements UserService {
         // Build UserEntity
         UserEntity userEntity = UserConverter.fromCreateUserDtoToUserEntity(userRegistrationDto);
         userEntity.setRole(userRole);
+
+        // Encrypt password
+        String encryptedPassword = passwordEncoder.encode(userRegistrationDto.getPassword());
+        // Set encrypted password
+        userEntity.setEncryptedPassword(encryptedPassword);
 
         // Persist user into database
         try {
@@ -82,13 +92,23 @@ public class UserServiceImp implements UserService {
     }
 
     /**
-     * @see UserService#getUsersList(Pageable)
+     * @see UserService#getUsersList(int, int , UserRole)
      */
-    public Paginated<UserDetailsDto> getUsersList(Pageable pagination) {
+    public Paginated<UserDetailsDto> getUsersList(int page, int size, UserRole userRole) {
 
-        // Get all users from database with pagination
-        LOGGER.debug("Getting all users with pagination - {}", pagination);
-        Page<UserEntity> usersList = userRepository.findAll(pagination);
+        // Get all users from database
+        LOGGER.debug("Getting all users from database");
+        Page<UserEntity> usersList;
+        try {
+            usersList = userRepository.findAllByRole(
+                    userRole.name(),
+                    PageRequest.of(page, size, Sort.by("first_name"))
+            );
+        } catch (Exception e) {
+            LOGGER.error("Failed while getting all users from database", e);
+            throw new DatabaseCommunicationException(ErrorMessages.DATABASE_COMMUNICATION_ERROR, e);
+        }
+
 
         // Convert list items from UserEntity to UserDetailsDto
         List<UserDetailsDto> usersListResponse = new ArrayList<>();
@@ -100,7 +120,7 @@ public class UserServiceImp implements UserService {
         Paginated<UserDetailsDto> paginated = new Paginated<>(
                 usersListResponse,
                 usersListResponse.size(),
-                pagination.getPageNumber(),
+                page,
                 usersList.getTotalPages(),
                 usersList.getTotalElements()
         );

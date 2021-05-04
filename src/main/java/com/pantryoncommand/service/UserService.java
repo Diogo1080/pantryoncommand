@@ -35,10 +35,12 @@ public interface UserService {
 
     /**
      * Gets list of users from database with pagination
-     * @param pagination the page and number of elements per page
+     * @param page the page
+     * @param size number of elements per page
+     * @param userRole the filter by role
      * @return {@link Paginated<UserDetailsDto>}
      */
-    Paginated<UserDetailsDto> getUsersList(Pageable pagination);
+    Paginated<UserDetailsDto> getUsersList(int page, int size, UserRole userRole);
 
     /**
      * Deletes certain user with id

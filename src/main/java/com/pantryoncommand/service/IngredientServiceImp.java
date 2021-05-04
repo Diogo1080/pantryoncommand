@@ -1,8 +1,8 @@
 package com.pantryoncommand.service;
 
 import com.pantryoncommand.command.Paginated;
-import com.pantryoncommand.command.recipe.CreateOrUpdateIngredientDto;
-import com.pantryoncommand.command.recipe.IngredientDetailsDto;
+import com.pantryoncommand.command.ingredient.CreateOrUpdateIngredientDto;
+import com.pantryoncommand.command.ingredient.IngredientDetailsDto;
 import com.pantryoncommand.converters.IngredientConverter;
 import com.pantryoncommand.error.ErrorMessages;
 import com.pantryoncommand.exeption.DatabaseCommunicationException;

@@ -1,7 +1,10 @@
 package com.pantryoncommand.persistence.repository;
 
 import com.pantryoncommand.persistence.entity.RecipeEntity;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.stereotype.Repository;
 
-public interface RecipeRepository extends CrudRepository<RecipeEntity, Long> {
+@Repository
+public interface RecipeRepository extends PagingAndSortingRepository<RecipeEntity, Long> {
+
 }

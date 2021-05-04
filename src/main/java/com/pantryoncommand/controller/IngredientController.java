@@ -3,14 +3,15 @@ package com.pantryoncommand.controller;
 
 
 import com.pantryoncommand.command.Paginated;
-import com.pantryoncommand.command.recipe.CreateOrUpdateIngredientDto;
-import com.pantryoncommand.command.recipe.IngredientDetailsDto;
+import com.pantryoncommand.command.ingredient.CreateOrUpdateIngredientDto;
+import com.pantryoncommand.command.ingredient.IngredientDetailsDto;
 import com.pantryoncommand.service.IngredientServiceImp;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -21,7 +22,7 @@ import static org.springframework.http.HttpStatus.OK;
  * Ingredient Controller provides end points for CRUD operations on categories
  */
 @RestController
-@RequestMapping("/ingredients")
+@RequestMapping("/api/ingredients")
 public class IngredientController {
     private static final Logger LOGGER = LogManager.getLogger(IngredientController.class);
     private final IngredientServiceImp ingredientService;
@@ -36,6 +37,9 @@ public class IngredientController {
      * @return {@link IngredientDetailsDto}
      */
     @PostMapping
+    @PreAuthorize("@authorized.hasRole(\"ADMIN\") || " +
+            "@authorized.hasRole(\" MOD \")"
+    )
     public ResponseEntity<IngredientDetailsDto> createIngredient(
             @Valid @RequestBody CreateOrUpdateIngredientDto createOrUpdateIngredientDto){
 
@@ -52,6 +56,9 @@ public class IngredientController {
      * @return {@link IngredientDetailsDto}
      */
     @GetMapping("/{ingredientId}")
+    @PreAuthorize("@authorized.hasRole(\"ADMIN\") || " +
+            "@authorized.hasRole(\" MOD \")"
+    )
     public ResponseEntity<IngredientDetailsDto> getIngredientById(@PathVariable long ingredientId) {
         LOGGER.info("Request to get ingredient of id - {}", ingredientId);
         IngredientDetailsDto ingredientDetailsDto = ingredientService.getIngredientById(ingredientId);
@@ -67,6 +74,10 @@ public class IngredientController {
      * @return {@link Paginated<IngredientDetailsDto>}
      */
     @GetMapping
+    @PreAuthorize("@authorized.hasRole(\"ADMIN\") || " +
+            "@authorized.hasRole(\" MOD \") ||" +
+            "@authorized.hasRole(\" USER \")"
+    )
     public ResponseEntity<Paginated<IngredientDetailsDto>> getIngredientList(
             @RequestParam(defaultValue="0") int page,
             @RequestParam(defaultValue="10") int size) {
@@ -84,6 +95,9 @@ public class IngredientController {
      * @return {@link IngredientDetailsDto}
      */
     @PutMapping("/{ingredientId}")
+    @PreAuthorize("@authorized.hasRole(\"ADMIN\") || " +
+            "@authorized.hasRole(\" MOD \")"
+    )
     public ResponseEntity<IngredientDetailsDto> updateIngredient(
             @PathVariable long ingredientId,
             @Valid @RequestBody CreateOrUpdateIngredientDto createOrUpdateIngredientDto) {
@@ -100,6 +114,9 @@ public class IngredientController {
      * @return Ok if deleted
      */
     @DeleteMapping("/{ingredientId}")
+    @PreAuthorize("@authorized.hasRole(\"ADMIN\") || " +
+            "@authorized.hasRole(\" MOD \")"
+    )
     public ResponseEntity deleteIngredient(@PathVariable long ingredientId) {
         LOGGER.info("Request to delete ingredient of id - {}", ingredientId);
         ingredientService.deleteIngredient(ingredientId);

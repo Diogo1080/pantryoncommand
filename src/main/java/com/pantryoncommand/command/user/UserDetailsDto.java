@@ -4,7 +4,7 @@ import lombok.Builder;
 import lombok.Data;
 
 /**
- * CreateUserDto mainly used to store user info when creating users
+ * UserDetailsDto mainly used to store user info
  */
 
 @Data

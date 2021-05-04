@@ -1,4 +1,4 @@
-package com.pantryoncommand.command.recipe;
+package com.pantryoncommand.command.ingredient;
 
 import lombok.Builder;
 import lombok.Data;

@@ -30,9 +30,9 @@ public class UserEntity {
     private String email;
 
     @Column(nullable = false)
-    private String password;
+    private String encryptedPassword;
 
-    @Enumerated(EnumType.ORDINAL)
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private UserRole role;
 }

@@ -30,7 +30,7 @@ public class IngredientEntity {
     @Column(nullable = false)
     private String name;
 
-    @OneToMany(mappedBy = "ingredientEntity")
-    private List<HasEntity> recipes;
+    @ManyToMany(mappedBy = "ingredients")
+    private List<RecipeEntity> recipes;
 
 }

@@ -1,9 +1,11 @@
 package com.pantryoncommand.exeption.ingredient;
 
+import com.pantryoncommand.exeption.PantryOnCommandApiException;
+
 /**
- * Ingredient already exists exception trowed when ingredient already exists in database
+ * A {@link PantryOnCommandApiException} thrown when ingredient already exists exception
  */
-public class IngredientAlreadyExistsException extends RuntimeException{
+public class IngredientAlreadyExistsException extends PantryOnCommandApiException {
     public IngredientAlreadyExistsException(String message) {
         super(message);
     }

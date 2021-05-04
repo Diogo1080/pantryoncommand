@@ -1,7 +1,7 @@
 package com.pantryoncommand.converters;
 
-import com.pantryoncommand.command.recipe.CreateOrUpdateIngredientDto;
-import com.pantryoncommand.command.recipe.IngredientDetailsDto;
+import com.pantryoncommand.command.ingredient.CreateOrUpdateIngredientDto;
+import com.pantryoncommand.command.ingredient.IngredientDetailsDto;
 import com.pantryoncommand.persistence.entity.IngredientEntity;
 
 public class IngredientConverter {

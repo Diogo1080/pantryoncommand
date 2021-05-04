@@ -33,12 +33,17 @@ public class RecipeEntity {
     @Column(nullable = false)
     private String steps;
 
-    @Column(nullable = false)
+    @Column
     private String photo;
 
     @Column
-    private int prepTime;
+    private String prepTime;
 
-    @OneToMany(mappedBy = "recipeEntity")
-    private List<HasEntity> ingredients;
+    @ManyToMany
+    @JoinTable(
+            name= "recipe_has",
+            joinColumns = @JoinColumn(name = "recipe_id"),
+            inverseJoinColumns = @JoinColumn(name = "ingredient_id")
+    )
+    private List<IngredientEntity> ingredients;
 }

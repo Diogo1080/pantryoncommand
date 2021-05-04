@@ -1,5 +1,6 @@
 package com.pantryoncommand.converters;
 
+import com.pantryoncommand.command.auth.PrincipalDto;
 import com.pantryoncommand.command.user.CreateUserDto;
 import com.pantryoncommand.command.user.UserDetailsDto;
 import com.pantryoncommand.persistence.entity.UserEntity;
@@ -19,7 +20,7 @@ public class UserConverter {
         return UserEntity.builder()
                 .userName(createUserDto.getUserName())
                 .email(createUserDto.getEmail())
-                .password(createUserDto.getPassword())
+                .encryptedPassword(createUserDto.getPassword())
                 .build();
     }
 
@@ -36,4 +37,16 @@ public class UserConverter {
                 .build();
     }
 
+    /**
+     * Convert from {@link UserEntity} to {@link PrincipalDto}
+     * @param userEntity
+     * @return {@link PrincipalDto}
+     */
+    public static PrincipalDto fromUserEntityToPrincipalDto(UserEntity userEntity) {
+        return PrincipalDto.builder()
+                .userId(userEntity.getId())
+                .firstName(userEntity.getUserName())
+                .userRole(userEntity.getRole())
+                .build();
+    }
 }

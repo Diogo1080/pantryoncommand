@@ -1,9 +1,11 @@
 package com.pantryoncommand.exeption.ingredient;
 
+import com.pantryoncommand.exeption.PantryOnCommandApiException;
+
 /**
- * Ingredient not found exception trowed when ingredient is not found in database
+ * A {@link PantryOnCommandApiException} thrown when ingredient not found
  */
-public class IngredientNotFoundException extends RuntimeException{
+public class IngredientNotFoundException extends PantryOnCommandApiException {
     public IngredientNotFoundException(String message) {
         super(message);
     }

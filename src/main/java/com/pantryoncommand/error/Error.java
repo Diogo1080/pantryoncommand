@@ -15,5 +15,6 @@ public class Error {
     Date timestamp;
     String message;
     String method;
+    String exception;
     String path;
 }

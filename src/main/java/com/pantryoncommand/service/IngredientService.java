@@ -1,8 +1,8 @@
 package com.pantryoncommand.service;
 
 import com.pantryoncommand.command.Paginated;
-import com.pantryoncommand.command.recipe.CreateOrUpdateIngredientDto;
-import com.pantryoncommand.command.recipe.IngredientDetailsDto;
+import com.pantryoncommand.command.ingredient.CreateOrUpdateIngredientDto;
+import com.pantryoncommand.command.ingredient.IngredientDetailsDto;
 import com.pantryoncommand.exeption.DatabaseCommunicationException;
 import com.pantryoncommand.exeption.category.CategoryNotFoundException;
 import com.pantryoncommand.exeption.ingredient.IngredientAlreadyExistsException;
