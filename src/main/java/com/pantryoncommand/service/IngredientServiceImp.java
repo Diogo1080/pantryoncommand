@@ -95,13 +95,13 @@ public class IngredientServiceImp implements IngredientService{
     }
 
     /**
-     * @see IngredientService#getIngredientList(Pageable)
+     * @see IngredientService#getIngredientList(long,Pageable)
      */
-    public Paginated<IngredientDetailsDto> getIngredientList(Pageable pagination) {
+    public Paginated<IngredientDetailsDto> getIngredientList(long categoryId, Pageable pagination) {
 
         // Get all ingredients from database with pagination
         LOGGER.debug("Getting all ingredients with pagination - {}", pagination);
-        Page<IngredientEntity> ingredientsList = ingredientRepository.findAll(pagination);
+        Page<IngredientEntity> ingredientsList = ingredientRepository.findAllByCategoryId(categoryId,pagination);
 
         // Convert list items from IngredientEntity to IngredientDetailsDto
         List<IngredientDetailsDto> ingredientsListResponse = new ArrayList<>();

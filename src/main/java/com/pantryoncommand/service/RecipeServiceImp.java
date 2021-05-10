@@ -19,11 +19,9 @@ import com.pantryoncommand.exeption.recipe.RecipeNotFoundException;
 import com.pantryoncommand.exeption.user.UserNotFoundException;
 import com.pantryoncommand.persistence.entity.IngredientEntity;
 import com.pantryoncommand.persistence.entity.RecipeEntity;
+import com.pantryoncommand.persistence.entity.TempIngredientIdEntity;
 import com.pantryoncommand.persistence.entity.UserEntity;
-import com.pantryoncommand.persistence.repository.FileSystemRepository;
-import com.pantryoncommand.persistence.repository.IngredientRepository;
-import com.pantryoncommand.persistence.repository.RecipeRepository;
-import com.pantryoncommand.persistence.repository.UserRepository;
+import com.pantryoncommand.persistence.repository.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.tika.Tika;
@@ -48,17 +46,20 @@ public class RecipeServiceImp implements RecipeService {
     private final RecipeRepository recipeRepository;
     private final UserRepository userRepository;
     private final FileSystemRepository fileSystemRepository;
+    private final TempIngredientIdRepository tempIngredientIdRepositoryRepository;
 
     private static final Logger LOGGER = LogManager.getLogger(RecipeServiceImp.class);
 
     public RecipeServiceImp(IngredientRepository ingredientRepository,
                             RecipeRepository recipeRepository,
                             UserRepository userRepository,
-                            FileSystemRepository fileSystemRepository) {
+                            FileSystemRepository fileSystemRepository,
+                            TempIngredientIdRepository tempIngredientIdRepositoryRepository) {
         this.ingredientRepository = ingredientRepository;
         this.recipeRepository = recipeRepository;
         this.userRepository = userRepository;
         this.fileSystemRepository = fileSystemRepository;
+        this.tempIngredientIdRepositoryRepository = tempIngredientIdRepositoryRepository;
     }
 
 
@@ -230,14 +231,27 @@ public class RecipeServiceImp implements RecipeService {
     }
 
     /**
-     * @see RecipeService#getRecipeList(PageRequest)
+     * @see RecipeService#getRecipeList(List, PageRequest)
      */
     @Override
-    public Paginated<RecipeDetailsDto> getRecipeList(PageRequest pagination) {
+    public Paginated<RecipeDetailsDto> getRecipeList(List<Long> ingredients, PageRequest pagination) {
+
+        // Setting up temp table
+        LOGGER.debug("Setting all temp ingredients - {}", ingredients);
+        for (long ingredient:ingredients) {
+            TempIngredientIdEntity tempIngredient=TempIngredientIdEntity.builder().entityId(ingredient).build();
+            tempIngredientIdRepositoryRepository.save(tempIngredient);
+        }
 
         // Get recipes with pagination
         LOGGER.debug("Getting all recipes with pagination - {}", pagination);
-        Page<RecipeEntity> recipeList = recipeRepository.findAll(pagination);
+        Page<RecipeEntity> recipeList = recipeRepository.findAllByIngredientId(pagination);
+
+        // Deleting Temp
+        for (long ingredient:ingredients) {
+            TempIngredientIdEntity tempIngredient=TempIngredientIdEntity.builder().entityId(ingredient).build();
+            tempIngredientIdRepositoryRepository.delete(tempIngredient);
+        }
 
         // Convert list items from RecipeEntity to RecipeDetailsDto
         List<RecipeDetailsDto> recipeListResponse = new ArrayList<>();

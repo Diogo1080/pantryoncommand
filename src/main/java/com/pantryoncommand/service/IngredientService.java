@@ -37,10 +37,11 @@ public interface IngredientService {
 
         /**
          * Gets list of categories from database with pagination
+         * @param categoryId the category id
          * @param pagination the page and number of elements per page
          * @return {@link Paginated <IngredientDetailsDto>}
          */
-        Paginated<IngredientDetailsDto> getIngredientList(Pageable pagination);
+        Paginated<IngredientDetailsDto> getIngredientList(long categoryId, Pageable pagination);
 
         /**
          * Deletes certain Ingredient with id

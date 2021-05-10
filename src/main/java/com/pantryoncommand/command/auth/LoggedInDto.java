@@ -9,5 +9,6 @@ import lombok.Data;
 @Data
 @Builder
 public class LoggedInDto {
+    private PrincipalDto principal;
     private String token;
 }

@@ -81,6 +81,7 @@ public class AuthServiceImp implements AuthService {
 
         // Build LoggedInDto for the response
         return LoggedInDto.builder()
+                .principal(principal)
                 .token(token)
                 .build();
     }
@@ -116,7 +117,7 @@ public class AuthServiceImp implements AuthService {
         // Set claims
         Map<String, Object> claimsMap = new HashMap<>();
         claimsMap.put("userId", principalDto.getUserId());
-        claimsMap.put("firstName", principalDto.getFirstName());
+        claimsMap.put("username", principalDto.getUsername());
         claimsMap.put("role", principalDto.getUserRole());
 
         Claims claims = Jwts.claims(claimsMap);

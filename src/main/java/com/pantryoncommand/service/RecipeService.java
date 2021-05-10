@@ -1,6 +1,7 @@
 package com.pantryoncommand.service;
 
 import com.pantryoncommand.command.Paginated;
+import com.pantryoncommand.command.ingredient.IngredientListDto;
 import com.pantryoncommand.command.recipe.CreateRecipeDto;
 import com.pantryoncommand.command.recipe.UpdateRecipeDto;
 import com.pantryoncommand.command.recipe.RecipeDetailsDto;
@@ -15,6 +16,8 @@ import com.pantryoncommand.exeption.user.UserNotFoundException;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.web.multipart.MultipartFile;
+
+import java.util.List;
 
 /**
  * Common interface for Recipe service, provides methods to manage Recipes
@@ -73,10 +76,11 @@ public interface RecipeService {
     /**
      * Get recipe list paginated
      *
+     * @param ingredients list of ingredients
      * @param paginated {@link Paginated}
      * @return {@link Paginated<RecipeDetailsDto>}
      */
-    Paginated<RecipeDetailsDto> getRecipeList(PageRequest paginated);
+    Paginated<RecipeDetailsDto> getRecipeList(List<Long> ingredients, PageRequest paginated);
 
     /**
      * Update Recipe by id

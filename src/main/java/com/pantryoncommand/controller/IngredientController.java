@@ -79,10 +79,11 @@ public class IngredientController {
             "@authorized.hasRole(\" USER \")"
     )
     public ResponseEntity<Paginated<IngredientDetailsDto>> getIngredientList(
+            @RequestParam(defaultValue="0") long categoryId,
             @RequestParam(defaultValue="0") int page,
             @RequestParam(defaultValue="10") int size) {
         LOGGER.info("Request to get ingredient list with page and size - {} {}", page, size);
-        Paginated<IngredientDetailsDto> ingredientList = ingredientService.getIngredientList(PageRequest.of(page, size));
+        Paginated<IngredientDetailsDto> ingredientList = ingredientService.getIngredientList(categoryId, PageRequest.of(page, size));
 
         LOGGER.info("Retrieving List of ingredient with info - {}", ingredientList);
         return new ResponseEntity<>(ingredientList, OK);

@@ -1,6 +1,7 @@
 package com.pantryoncommand.controller;
 
 import com.pantryoncommand.command.Paginated;
+import com.pantryoncommand.command.ingredient.IngredientListDto;
 import com.pantryoncommand.command.recipe.CreateRecipeDto;
 import com.pantryoncommand.command.recipe.UpdateRecipeDto;
 import com.pantryoncommand.command.recipe.RecipeDetailsDto;
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.validation.Valid;
+import java.util.List;
 
 
 /**
@@ -107,10 +109,11 @@ public class RecipeController {
      */
     @GetMapping
     public ResponseEntity<Paginated<RecipeDetailsDto>> getRecipeList(
+            @RequestParam List<Long> ingredients,
             @RequestParam(defaultValue="0") int page,
             @RequestParam(defaultValue="10") int size) {
-        LOGGER.info("Request to get recipe list with page and size - {} {}", page, size);
-        Paginated<RecipeDetailsDto> recipeList = recipeServiceImp.getRecipeList(PageRequest.of(page, size));
+        LOGGER.info("Request to get recipe list with page and size and sort - {} {} {}", page, size, ingredients);
+        Paginated<RecipeDetailsDto> recipeList = recipeServiceImp.getRecipeList(ingredients,PageRequest.of(page, size));
 
         LOGGER.info("Retrieving List of recipe with info - {}", recipeList);
         return new ResponseEntity<>(recipeList, HttpStatus.OK);
